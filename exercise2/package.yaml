@@ -21,6 +21,9 @@ description:         Please see the README on Github at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- QuickCheck >= 2.9.2
+- test-framework             >= 0.4     && < 1
+- test-framework-quickcheck2 >= 0.2.0 && < 0.4
 
 library:
   source-dirs: src
