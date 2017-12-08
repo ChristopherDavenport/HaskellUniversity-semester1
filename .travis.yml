@@ -37,6 +37,8 @@ install:
 - stack --no-terminal --install-ghc test --only-dependencies
 - cd ../exercise2
 - stack --no-terminal --install-ghc test --only-dependencies
+- cd ../exercise3
+- stack --no-terminal --install-ghc test --only-dependencies
 - cd ..
 
 script:
@@ -44,4 +46,6 @@ script:
 - cd exercise1
 - stack --no-terminal test --haddock --no-haddock-deps
 - cd ../exercise2
-- stack --no-terminal test --haddock --no-haddock-deps
+- stack --no-terminal test --haddock --no-haddock-deps-
+- cd ../exercise3
+- stack --no-terminal test --haddock --no-haddock-deps-
