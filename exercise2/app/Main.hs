@@ -4,7 +4,7 @@ import Lib
 import System.Environment
 
 main :: IO ()
-main = mainQuickSort
+main = mainFizzBuzz
 
 mainQuickSort :: IO ()
 mainQuickSort =

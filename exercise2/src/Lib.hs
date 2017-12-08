@@ -14,17 +14,11 @@ quicksort (x:xs) =
 -- FizzBuzz Implementation
 
 fizzbuzz :: [Int] -> [String]
-fizzbuzz ints = fb (\i -> i `rem` 3 == 0) (\i -> i `rem` 5 == 0) ints
-
-fb :: (Show a) => (a -> Bool) -> (a -> Bool) -> [a] -> [String]
-fb fizz buzz l = fmap (fizzbuzzer fizz buzz) l
+fizzbuzz = fmap $ fizzbuzzer (\i -> i `rem` 3 == 0) (\i -> i `rem` 5 == 0)
 
 fizzbuzzer :: (Show a) => (a -> Bool) -> (a -> Bool) -> a -> String
-fizzbuzzer fizz buzz a =
-  if fizz a && buzz a
-      then "FizzBuzz"
-      else if fizz a
-        then "Fizz"
-        else if buzz a
-          then "Buzz"
-          else show a
+fizzbuzzer fizz buzz a
+  | fizz a && buzz a  = "FizzBuzz"
+  | fizz a            = "Fizz"
+  | buzz a            = "Buzz"
+  | otherwise         = show a
