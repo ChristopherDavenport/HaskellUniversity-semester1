@@ -13,7 +13,7 @@ quicksort (x:xs) =
 
 -- FizzBuzz Implementation
 
-fizzbuzz :: [Int] -> [String]
+fizzbuzz :: (Functor f) => f Integer -> f String
 fizzbuzz = fmap $ fizzbuzzer (\i -> i `rem` 3 == 0) (\i -> i `rem` 5 == 0)
 
 fizzbuzzer :: (Show a) => (a -> Bool) -> (a -> Bool) -> a -> String
