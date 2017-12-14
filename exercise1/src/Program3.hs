@@ -3,7 +3,9 @@ module Program3
   ) where
 
 import Program2
-import Control.Monad
 
 program3Main :: IO()
 program3Main = forever program2MainBind
+
+forever :: (Monad m) => m a -> m a
+forever m = m >> forever m
